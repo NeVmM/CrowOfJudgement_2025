@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"PlayerStateAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerStateAttack",
+  "parent":{
+    "name":"CrowOfJudgement_ROLLUpdate(backup)",
+    "path":"CrowOfJudgement_ROLLUpdate(backup).yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

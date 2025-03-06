@@ -1,0 +1,27 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Actions_Controls","order":1,"path":"folders/Actions_Controls.yy",},
+    {"name":"Camera","order":4,"path":"folders/Camera.yy",},
+    {"name":"Character_Sprite","order":2,"path":"folders/Character_Sprite.yy",},
+    {"name":"Music","order":5,"path":"folders/Music.yy",},
+    {"name":"Test Objects","order":3,"path":"folders/Test Objects.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"objGame","order":3,"path":"objects/objGame/objGame.yy",},
+    {"name":"oWeapon","order":10,"path":"objects/oWeapon/oWeapon.yy",},
+    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"AttackSlash","order":8,"path":"scripts/AttackSlash/AttackSlash.yy",},
+    {"name":"PlayerStateAttack","order":7,"path":"scripts/PlayerStateAttack/PlayerStateAttack.yy",},
+    {"name":"PlayerStateFree","order":6,"path":"scripts/PlayerStateFree/PlayerStateFree.yy",},
+    {"name":"Sprite_1Jump","order":3,"path":"sprites/Sprite_1Jump/Sprite_1Jump.yy",},
+    {"name":"Sprite_2Jump","order":4,"path":"sprites/Sprite_2Jump/Sprite_2Jump.yy",},
+    {"name":"Sprite_Attack","order":9,"path":"sprites/Sprite_Attack/Sprite_Attack.yy",},
+    {"name":"Sprite_AttackFX","order":11,"path":"sprites/Sprite_AttackFX/Sprite_AttackFX.yy",},
+    {"name":"Sprite_Fall","order":5,"path":"sprites/Sprite_Fall/Sprite_Fall.yy",},
+    {"name":"Sprite_Glide","order":6,"path":"sprites/Sprite_Glide/Sprite_Glide.yy",},
+    {"name":"Sprite_Idle","order":1,"path":"sprites/Sprite_Idle/Sprite_Idle.yy",},
+    {"name":"Sprite_Roll","order":7,"path":"sprites/Sprite_Roll/Sprite_Roll.yy",},
+    {"name":"Sprite_Run","order":2,"path":"sprites/Sprite_Run/Sprite_Run.yy",},
+    {"name":"Sprite001","order":1,"path":"sprites/Sprite001/Sprite001.yy",},
+  ],
+}
