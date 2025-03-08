@@ -73,11 +73,13 @@ jumpPower = 0.5;
 #region //Rolling & I-frames
 
 is_rolling = false;
-roll_Speed = 10;
 roll_Duration = room_speed * .3;
 rollSpeed = 10; // Adjust this value for desired roll speed
 rollCooldown = 0;
 rollAir = 7.5;
+
+canRoll = true;       // Determines if rolling is allowed
+airRollUsed = false;  // Tracks if an air roll has been used
 
 //Roll (i-frames)
 i_frames = false;

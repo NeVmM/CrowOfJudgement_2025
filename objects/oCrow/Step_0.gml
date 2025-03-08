@@ -116,50 +116,59 @@ else
 
 #region Roll State	
 
-//Roll Cooldown
+// Roll Cooldown Timer
 if (rollCooldown > 0) 
 {
     rollCooldown--; 
 }
 
-//Roll Controls
-if (rollKey && !is_rolling && rollCooldown <= 0) 
+// Prevent unlimited air rolls
+if (!onGround && airRollUsed) 
+{
+    canRoll = false;
+}
+
+// Roll Controls
+if (rollKey && !is_rolling && rollCooldown <= 0 && canRoll) 
 {
     is_rolling = true;
     alarm[0] = roll_Duration; // Start the roll duration timer
-	i_frames = true; // Start i-frames if Character Rolls
-	
-	// Set xSpeed to rollSpeed regardless of movement direction
-    xSpeed = rollSpeed * face; // Face determines the direction
-	
-	// Apply cooldown after rolling
-    rollCooldown = 25; // 60 frames = 1 second
+    i_frames = true; // Enable invincibility frames
+    xSpeed = rollSpeed * face; // Set roll speed in the facing direction
+    rollCooldown = 60; // 1.5 seconds cooldown (60 frames = 1 sec)
+
+    // If rolling in the air, prevent multiple air rolls
+    if (!onGround) 
+    {
+        airRollUsed = true;
+    }
 }
 
+// Rolling animation & movement
 if (is_rolling) 
 {
-	sprite_index = Sprite_Roll;
-    
-	if (is_on_ground) 
-	{
-		// Maintain rolling speed only if on the ground (10)
-		xSpeed = rollSpeed * face;
-	}
-	else 
-	{
-		// Reduces the roll_speed from 10 to 7.5
-		xSpeed = rollAir*face;
-	}
-} 
+    sprite_index = Sprite_Roll;
 
-else
+    if (onGround) 
+    {
+        xSpeed = rollSpeed * face; // Maintain ground rolling speed
+    }
+    else 
+    {
+        xSpeed = rollAir * face; // Reduce air rolling speed
+    }
+}
+
+// Reset rolling ability when touching the ground
+if (onGround) 
 {
-    xSpeed = moveDirection * moveSpeed; // Normal Running Speed
+    airRollUsed = false;
+    canRoll = true;
 }
 
 if (!is_rolling)
 {
-	grav = .275;
+    grav = 0.275;
 }
 
 #endregion
@@ -294,20 +303,20 @@ else
 
 #region Air Attack / Float Mechanic
 
-// When attacking mid-air, stop completely and reset float timer
-if (!onGround && attackKey && airAttackCount == 0) 
+// When attacking mid-air, allow up to 3 attacks
+if (!onGround && attackKey && airAttackCount < 3) 
 {
-    floating = true;        // Activate floating state
-    airFloatTimer = 30;     // 0.5 seconds
-    ySpeed = 0;             // Completely stop movement
-    grav = 0;               // Disable gravity
-	airAttackCount = 1;	// Prevent future floating resets
+    airAttackCount++;  // Increase attack count
+    floating = true;    // Activate floating state
+    airFloatTimer = 20;  // Short pause (adjust if needed)
+    ySpeed = 0;         // Stop vertical movement
+    grav = 0;           // Disable gravity temporarily
 }
 
 // Maintain floating state while timer is active
 if (floating) 
 {
-    airFloatTimer--;         // Countdown
+    airFloatTimer--; // Countdown timer
 
     // Prevent movement while floating
     ySpeed = 0;
@@ -315,8 +324,8 @@ if (floating)
 
     if (airFloatTimer <= 0) 
     {
-        floating = false;   // End floating state
-        grav = 0.275;       // Restore normal gravity
+        floating = false;  // End floating state
+        grav = 0.275;      // Restore gravity
     }
 }
 
@@ -325,7 +334,6 @@ if (onGround)
 {
     airAttackCount = 0;
 }
-
 
 #endregion
 
