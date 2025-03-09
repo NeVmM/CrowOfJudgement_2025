@@ -7,6 +7,7 @@
     {"name":"Test Objects","order":3,"path":"folders/Test Objects.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"oAfterImage_Roll","order":4,"path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},
     {"name":"objGame","order":3,"path":"objects/objGame/objGame.yy",},
     {"name":"oWeapon","order":10,"path":"objects/oWeapon/oWeapon.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},

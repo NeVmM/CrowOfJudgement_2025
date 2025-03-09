@@ -28,6 +28,7 @@
   "name":"CrowOfJudgement_ROLLUpdate(backup)",
   "resources":[
     {"id":{"name":"eObject1","path":"objects/eObject1/eObject1.yy",},},
+    {"id":{"name":"oAfterImage_Roll","path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},},
     {"id":{"name":"objGame","path":"objects/objGame/objGame.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCrow","path":"objects/oCrow/oCrow.yy",},},

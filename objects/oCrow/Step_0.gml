@@ -125,6 +125,7 @@ if (rollCooldown > 0)
 // Prevent unlimited air rolls
 if (!onGround && airRollUsed) 
 {
+	rollAir = 13.7;
     canRoll = false;
 }
 
@@ -148,6 +149,7 @@ if (rollKey && !is_rolling && rollCooldown <= 0 && canRoll)
 if (is_rolling) 
 {
     sprite_index = Sprite_Roll;
+	rollSpeed = 11.5;
 
     if (onGround) 
     {
@@ -156,6 +158,15 @@ if (is_rolling)
     else 
     {
         xSpeed = rollAir * face; // Reduce air rolling speed
+    }
+	
+	
+	// Create afterimage every few frames
+    if (game_get_speed(gamespeed_fps) mod 5 == 0) 
+    {
+        var ghost = instance_create_layer(x, y, layer, oAfterImage_Roll);
+        ghost.image_index = image_index; // Match the current animation frame
+        ghost.sprite_index = sprite_index; // Match current sprite
     }
 }
 
@@ -387,43 +398,47 @@ else
 #endregion
 
 #region Sprites Etc
-//Sprite Controls
-//Running
-if (abs(xSpeed) > 0) 
+// Sprite Controls
+
+// Running
+if (abs(xSpeed) > 0 && onGround) 
 { 
-	sprite_index = Sprite_Run; 
-}
-//Not Moving (idle)
-if (xSpeed == 0) 
+    sprite_index = Sprite_Run; 
+} 
+// Idle
+if (xSpeed == 0 && onGround) 
 { 
-	sprite_index = Sprite_Idle; 
-}
-//In the Air (1st jump)
+    sprite_index = Sprite_Idle; 
+} 
+// First Jump
 if (!onGround && jumpCount == 1 && ySpeed <= 0) 
 { 
-	sprite_index = Sprite_1Jump; 
-}
-//In the Air (2nd jump)
+    sprite_index = Sprite_1Jump; 
+} 
+// Second Jump
 if (!onGround && jumpCount == 2 && ySpeed <= 0) 
 { 
-	sprite_index = Sprite_2Jump; 
-}
-//Falling (after jump)
-if (!onGround && ySpeed > 0) 
+    sprite_index = Sprite_2Jump; 
+} 
+// Gliding (Give it high priority before falling)
+if (!onGround && jumpCount == 2 && jumpKey && ySpeed > 0)  
 { 
-	sprite_index = Sprite_Fall; 
-}
-//Gliding
-if (!onGround && jumpCount == 2 && jumpKey && ySpeed > 0) 
-{ 
-	sprite_index = Sprite_Glide; 
-}
-//Rolling
+    sprite_index = Sprite_Glide; 
+} 
+// Rolling
 if (is_rolling) 
 {
-	sprite_index = Sprite_Roll; // Set the rolling sprite
-	// Optional: Set a specific speed for rolling, if needed
-	direction = sign(xSpeed); // Maintain the direction of the roll
+    sprite_index = Sprite_Roll; 
+} 
+// Air Attack (Has priority over falling)
+if (!onGround && attackKey) 
+{
+    sprite_index = Sprite_AttackFX; 
+} 
+// Falling - Only apply if NOT gliding or attacking
+if (!onGround && ySpeed > 0 && !attackKey && !(jumpCount == 2 && jumpKey))  
+{ 
+    sprite_index = Sprite_Fall; 
 }
 
 
