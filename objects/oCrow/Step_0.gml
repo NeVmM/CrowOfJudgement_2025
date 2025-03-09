@@ -435,8 +435,8 @@ if (!onGround && attackKey)
 {
     sprite_index = Sprite_AttackFX; 
 } 
-// Falling - Only apply if NOT gliding or attacking
-if (!onGround && ySpeed > 0 && !attackKey && !(jumpCount == 2 && jumpKey))  
+// Falling - Only apply if NOT gliding, attacking, OR rolling
+if (!onGround && ySpeed > 0 && !attackKey && !(jumpCount == 2 && jumpKey) && !is_rolling)  
 { 
     sprite_index = Sprite_Fall; 
 }
