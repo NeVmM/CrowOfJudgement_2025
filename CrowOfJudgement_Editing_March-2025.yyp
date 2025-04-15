@@ -32,6 +32,7 @@
     {"id":{"name":"objGame","path":"objects/objGame/objGame.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCrow","path":"objects/oCrow/oCrow.yy",},},
+    {"id":{"name":"oTutorialControlsTEXT","path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},},
     {"id":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},

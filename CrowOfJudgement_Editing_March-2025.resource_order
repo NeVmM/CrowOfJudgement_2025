@@ -9,6 +9,7 @@
   "ResourceOrderSettings":[
     {"name":"oAfterImage_Roll","order":4,"path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},
     {"name":"objGame","order":3,"path":"objects/objGame/objGame.yy",},
+    {"name":"oTutorialControlsTEXT","order":9,"path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},
     {"name":"oWeapon","order":10,"path":"objects/oWeapon/oWeapon.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"AttackSlash","order":8,"path":"scripts/AttackSlash/AttackSlash.yy",},
