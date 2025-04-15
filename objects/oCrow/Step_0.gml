@@ -11,7 +11,10 @@ moveDirection = rightKey - leftKey;
 if moveDirection != 0 { face = moveDirection; }
 
 //X-Speed
+if (!floating)
+{
 xSpeed = moveDirection * moveSpeed;
+}
 
 #endregion	
 
@@ -294,22 +297,25 @@ y += ySpeed;
 //_________________________________________________________________________________________
 
 #region Attack
-//Attack
+// Attack cooldown for normal attacks
 if (attack_cooldown > 0)
 {
-	//if attack cooldown is not 0, reduce it to 0
-	attack_cooldown = max(0, attack_cooldown-1);
+    // If attack cooldown is not 0, reduce it
+    attack_cooldown = max(0, attack_cooldown - 1);
 }
 else
 {
-	//if it is 0, then player can attack again
-	if(attackKey && !is_rolling) //Prevents attacking while roll state
-	{
-		attack_cooldown= attack_max; //set cooldown timer
-		instance_create_layer(x, y, "Weapon", oWeapon);
-	}
+    // If attack cooldown is 0, player can attack again
+    if (attackKey && !is_rolling) // Prevent attacking while rolling
+    {
+        // Normal ground attack (if not in the air)
+        if (onGround)
+        {
+            attack_cooldown = attack_max; // Set cooldown timer
+            instance_create_layer(x, y, "Weapon", oWeapon); // Create weapon instance
+        }
+    }
 }
-
 #endregion
 
 #region Air Attack / Float Mechanic
@@ -321,7 +327,17 @@ if (!onGround && attackKey && airAttackCount < 3)
     floating = true;    // Activate floating state
     airFloatTimer = 20;  // Short pause (adjust if needed)
     ySpeed = 0;         // Stop vertical movement
+    xSpeed = 0;
     grav = 0;           // Disable gravity temporarily
+
+    // Create weapon instance for the attack
+    instance_create_layer(x, y, "Weapon", oWeapon);
+}
+
+// Stop attacks after 3 air attacks
+if (!onGround && airAttackCount == 3)
+{
+    attackKey = false;  // Disable attack input after 3 attacks
 }
 
 // Maintain floating state while timer is active
@@ -330,6 +346,7 @@ if (floating)
     airFloatTimer--; // Countdown timer
 
     // Prevent movement while floating
+    xSpeed = 0;
     ySpeed = 0;
     grav = 0;
 
@@ -340,13 +357,16 @@ if (floating)
     }
 }
 
-// Reset air attack count when landing
+// Reset air attack count and clear attack state when landing
 if (onGround) 
 {
-    airAttackCount = 0;
+    airAttackCount = 0;   // Reset the air attack count
+    attackKey = true;     // Re-enable attack key once the player is on the ground
 }
 
 #endregion
+
+
 
 
 
