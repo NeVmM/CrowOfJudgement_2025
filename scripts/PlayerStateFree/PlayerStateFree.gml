@@ -7,22 +7,7 @@ if (attackKey)
 	stateAttack = AttackSlash;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+// THIS IS NOTHING!
