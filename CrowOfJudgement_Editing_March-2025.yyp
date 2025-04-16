@@ -47,6 +47,7 @@
     {"id":{"name":"Sprite_AttackFX","path":"sprites/Sprite_AttackFX/Sprite_AttackFX.yy",},},
     {"id":{"name":"Sprite_Fall","path":"sprites/Sprite_Fall/Sprite_Fall.yy",},},
     {"id":{"name":"Sprite_Glide","path":"sprites/Sprite_Glide/Sprite_Glide.yy",},},
+    {"id":{"name":"Sprite_GlideIdle","path":"sprites/Sprite_GlideIdle/Sprite_GlideIdle.yy",},},
     {"id":{"name":"Sprite_Idle","path":"sprites/Sprite_Idle/Sprite_Idle.yy",},},
     {"id":{"name":"Sprite_Roll","path":"sprites/Sprite_Roll/Sprite_Roll.yy",},},
     {"id":{"name":"Sprite_Run","path":"sprites/Sprite_Run/Sprite_Run.yy",},},

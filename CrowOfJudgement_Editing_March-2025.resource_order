@@ -21,6 +21,7 @@
     {"name":"Sprite_AttackFX","order":11,"path":"sprites/Sprite_AttackFX/Sprite_AttackFX.yy",},
     {"name":"Sprite_Fall","order":5,"path":"sprites/Sprite_Fall/Sprite_Fall.yy",},
     {"name":"Sprite_Glide","order":6,"path":"sprites/Sprite_Glide/Sprite_Glide.yy",},
+    {"name":"Sprite_GlideIdle","order":12,"path":"sprites/Sprite_GlideIdle/Sprite_GlideIdle.yy",},
     {"name":"Sprite_Idle","order":1,"path":"sprites/Sprite_Idle/Sprite_Idle.yy",},
     {"name":"Sprite_Roll","order":7,"path":"sprites/Sprite_Roll/Sprite_Roll.yy",},
     {"name":"Sprite_Run","order":2,"path":"sprites/Sprite_Run/Sprite_Run.yy",},

@@ -8,12 +8,15 @@ getControls();
 moveDirection = rightKey - leftKey;
 
 //Get My Face
-if moveDirection != 0 { face = moveDirection; }
+if moveDirection != 0 
+{ 
+	face = moveDirection; 
+}
 
 //X-Speed
 if (!floating)
 {
-xSpeed = moveDirection * moveSpeed;
+	xSpeed = moveDirection * moveSpeed;
 }
 
 #endregion	
@@ -445,6 +448,11 @@ if (!onGround && jumpCount == 2 && jumpKey && ySpeed > 0)
 { 
     sprite_index = Sprite_Glide; 
 } 
+// GlidingIdle (not moving)
+if (!onGround && jumpCount == 2 && jumpKey && ySpeed > 0 && xSpeed == 0) 
+{ 
+    sprite_index = Sprite_GlideIdle; 
+} 
 // Rolling
 if (is_rolling) 
 {
@@ -472,8 +480,9 @@ mask_index = Sprite_1Jump;
 mask_index = Sprite_2Jump;
 mask_index = Sprite_Fall;
 mask_index = Sprite_Glide;
+mask_index = Sprite_GlideIdle;
 }
 
 #endregion
 
-// UPDATED IN MARCH 14
+// UPDATED IN MARCH 15
