@@ -111,10 +111,12 @@ if (ySpeed > 0)
 // Check if the player is on the ground
 if (place_meeting(x, y + 1, eObject1)) 
 {
+	// Detects if on the ground
     is_on_ground = true;
 }
 else 
 {
+	// Detects if NOT on the ground
     is_on_ground = false;
 }
 
@@ -485,4 +487,4 @@ mask_index = Sprite_GlideIdle;
 
 #endregion
 
-// UPDATED IN MARCH 15
+// UPDATED IN APRIL 16
