@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"Sprite_EnemySlime_Walking",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":57,
   "bbox_left":44,
   "bbox_right":80,

@@ -17,7 +17,7 @@ if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 
 #endregion
 
-// === RANDOM WALK TIMER ===
+// === RANDOM WALK & TIMER (Left or Right) ===
 #region
 
 move_timer -= 1;
@@ -25,7 +25,13 @@ move_timer -= 1;
 if (move_timer <= 0)
 {
     is_moving = !is_moving; // toggle between moving and stopping
-    move_timer = irandom_range(60, 180); // random delay before next toggle
+    move_timer = irandom_range(180, 420); // random delay before next toggle
+	
+	// Randomly flip direction when going idle
+    if (!is_moving)
+    {
+        facing = choose(1, -1);
+    }
 }
 
 #endregion
@@ -78,6 +84,19 @@ if (is_moving)
 
 #endregion
 
+// === LEDGE DETECTION ===
+#region
+
+// Look 1 pixel ahead in facing direction, and 1 pixel below that
+var checkX = x + 1;
+var checkY = y + 1;
+
+if (!position_meeting(checkX, checkY, eObject1)) {
+    facing *= -1; // Turn around at ledge
+}
+
+#endregion
+
 
 
 
@@ -95,4 +114,3 @@ else
 #endregion
 
 
-show_debug_message("Enemy HP: " + string(hp));
