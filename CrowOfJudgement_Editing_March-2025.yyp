@@ -33,6 +33,7 @@
   "resources":[
     {"id":{"name":"eObject1","path":"objects/eObject1/eObject1.yy",},},
     {"id":{"name":"oAfterImage_Roll","path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},},
+    {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},},
     {"id":{"name":"objGame","path":"objects/objGame/objGame.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCrow","path":"objects/oCrow/oCrow.yy",},},
@@ -54,6 +55,7 @@
     {"id":{"name":"Sprite_AttackFX","path":"sprites/Sprite_AttackFX/Sprite_AttackFX.yy",},},
     {"id":{"name":"Sprite_EnemyArms_Idle","path":"sprites/Sprite_EnemyArms_Idle/Sprite_EnemyArms_Idle.yy",},},
     {"id":{"name":"Sprite_EnemyArms_Walking","path":"sprites/Sprite_EnemyArms_Walking/Sprite_EnemyArms_Walking.yy",},},
+    {"id":{"name":"Sprite_EnemySlime_Dead","path":"sprites/Sprite_EnemySlime_Dead/Sprite_EnemySlime_Dead.yy",},},
     {"id":{"name":"Sprite_EnemySlime_Idle","path":"sprites/Sprite_EnemySlime_Idle/Sprite_EnemySlime_Idle.yy",},},
     {"id":{"name":"Sprite_EnemySlime_Walking","path":"sprites/Sprite_EnemySlime_Walking/Sprite_EnemySlime_Walking.yy",},},
     {"id":{"name":"Sprite_Fall","path":"sprites/Sprite_Fall/Sprite_Fall.yy",},},

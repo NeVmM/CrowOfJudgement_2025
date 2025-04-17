@@ -11,6 +11,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"oAfterImage_Roll","order":4,"path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},
+    {"name":"Object10","order":4,"path":"objects/Object10/Object10.yy",},
     {"name":"objGame","order":3,"path":"objects/objGame/objGame.yy",},
     {"name":"oEnemySlime","order":1,"path":"objects/oEnemySlime/oEnemySlime.yy",},
     {"name":"oTutorialControlsTEXT","order":9,"path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},
@@ -25,6 +26,7 @@
     {"name":"Sprite_AttackFX","order":5,"path":"sprites/Sprite_AttackFX/Sprite_AttackFX.yy",},
     {"name":"Sprite_EnemyArms_Idle","order":2,"path":"sprites/Sprite_EnemyArms_Idle/Sprite_EnemyArms_Idle.yy",},
     {"name":"Sprite_EnemyArms_Walking","order":1,"path":"sprites/Sprite_EnemyArms_Walking/Sprite_EnemyArms_Walking.yy",},
+    {"name":"Sprite_EnemySlime_Dead","order":3,"path":"sprites/Sprite_EnemySlime_Dead/Sprite_EnemySlime_Dead.yy",},
     {"name":"Sprite_EnemySlime_Walking","order":2,"path":"sprites/Sprite_EnemySlime_Walking/Sprite_EnemySlime_Walking.yy",},
     {"name":"Sprite_Fall","order":6,"path":"sprites/Sprite_Fall/Sprite_Fall.yy",},
     {"name":"Sprite_Glide","order":7,"path":"sprites/Sprite_Glide/Sprite_Glide.yy",},

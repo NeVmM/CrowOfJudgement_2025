@@ -1,15 +1,25 @@
 // === GRAVITY ===
+#region
+
 var grav = 0.5;
 ySpeed += grav;
 ySpeed = clamp(ySpeed, -10, 10);
 
+#endregion
+
 // === TURN AROUND ON WALL COLLISION ===
+#region
+
 if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 {
     facing *= -1;
 }
 
+#endregion
+
 // === RANDOM WALK TIMER ===
+#region
+
 move_timer -= 1;
 
 if (move_timer <= 0)
@@ -18,7 +28,11 @@ if (move_timer <= 0)
     move_timer = irandom_range(60, 180); // random delay before next toggle
 }
 
+#endregion
+
 // === HORIZONTAL MOVEMENT ===
+#region
+
 if (is_moving) {
     xSpeed = moveSpeed * facing;
 } else {
@@ -26,7 +40,11 @@ if (is_moving) {
 	sprite_index = Sprite_EnemyArms_Idle;
 }
 
+#endregion
+
 // --- HORIZONTAL COLLISION ---
+#region
+
 if (place_meeting(x + xSpeed, y, eObject1))
 {
     while (!place_meeting(x + sign(xSpeed), y, eObject1))
@@ -37,7 +55,11 @@ if (place_meeting(x + xSpeed, y, eObject1))
 }
 x += xSpeed;
 
+#endregion
+
 // --- VERTICAL COLLISION ---
+#region 
+
 if (place_meeting(x, y + ySpeed, eObject1))
 {
     while (!place_meeting(x, y + sign(ySpeed), eObject1))
@@ -54,12 +76,14 @@ if (is_moving)
     image_xscale = facing;
 }
 
+#endregion
 
 
 
 
 
 // OTHER STUFF BELOW
+#region sprites
 
 if (is_moving) 
 {
@@ -69,3 +93,5 @@ else
 {
     sprite_index = Sprite_EnemyArms_Idle;
 }
+
+#endregion
