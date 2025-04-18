@@ -17,3 +17,4 @@ else
 	dir = -1; //set direction to -1 (left)
 }
 
+

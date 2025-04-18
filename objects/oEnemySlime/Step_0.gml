@@ -39,9 +39,12 @@ if (move_timer <= 0)
 // === HORIZONTAL MOVEMENT ===
 #region
 
-if (is_moving) {
+if (is_moving) 
+{
     xSpeed = moveSpeed * facing;
-} else {
+} 
+else 
+{
     xSpeed = 0;
 	sprite_index = Sprite_EnemySlime_Idle;
 }
@@ -98,6 +101,13 @@ if (!position_meeting(checkX, checkY, eObject1)) {
 #endregion
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
 

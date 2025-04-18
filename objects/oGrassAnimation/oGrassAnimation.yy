@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"eObject1",
+  "%Name":"oGrassAnimation",
   "eventList":[],
   "managed":true,
-  "name":"eObject1",
+  "name":"oGrassAnimation",
   "overriddenProperties":[],
   "parent":{
-    "name":"Blocks",
-    "path":"folders/Blocks.yy",
+    "name":"CrowOfJudgement_ROLLUpdate(backup)",
+    "path":"CrowOfJudgement_ROLLUpdate(backup).yyp",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,11 +26,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"Test_Block",
-    "path":"sprites/Test_Block/Test_Block.yy",
+    "name":"Sprite20",
+    "path":"sprites/Sprite20/Sprite20.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
