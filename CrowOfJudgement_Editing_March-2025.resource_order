@@ -12,11 +12,12 @@
   ],
   "ResourceOrderSettings":[
     {"name":"eObject1","order":1,"path":"objects/eObject1/eObject1.yy",},
-    {"name":"oAfterImage_Roll","order":12,"path":"objects/oAfterImage_Roll/oAfterImage_Roll.yy",},
     {"name":"objGame","order":1,"path":"objects/objGame/objGame.yy",},
+    {"name":"oCrow_RollFade","order":12,"path":"objects/oCrow_RollFade/oCrow_RollFade.yy",},
     {"name":"oEnemySlime","order":1,"path":"objects/oEnemySlime/oEnemySlime.yy",},
     {"name":"oEnemySlimeDead","order":4,"path":"objects/oEnemySlimeDead/oEnemySlimeDead.yy",},
     {"name":"oGrassAnimation","order":10,"path":"objects/oGrassAnimation/oGrassAnimation.yy",},
+    {"name":"oParticleCrow","order":13,"path":"objects/oParticleCrow/oParticleCrow.yy",},
     {"name":"oTutorialControlsTEXT","order":1,"path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},
     {"name":"oWeapon","order":1,"path":"objects/oWeapon/oWeapon.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},

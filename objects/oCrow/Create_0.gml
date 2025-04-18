@@ -116,3 +116,4 @@ floating = false; // Track if floating is active
 airAttackCount = 0; // Tracks if the player has attacked mid-air
 
 #endregion
+

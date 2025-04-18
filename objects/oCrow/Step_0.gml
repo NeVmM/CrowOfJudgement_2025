@@ -172,7 +172,7 @@ if (is_rolling)
 	// Create afterimage every few frames
     if (game_get_speed(gamespeed_fps) mod 5 == 0) 
     {
-        var ghost = instance_create_layer(x, y, layer, oAfterImage_Roll);
+        var ghost = instance_create_layer(x, y, layer, oCrow_RollFade);
         ghost.image_index = image_index; // Match the current animation frame
         ghost.sprite_index = sprite_index; // Match current sprite
     }
@@ -381,14 +381,14 @@ if (onGround)
 //=========================================================================================
 //OTHER STUFF BELOW
 //=========================================================================================
-
+/*
 #region Particle System
 // Emit particles when the player is running
 if (abs(xSpeed) > 0 && onGround) 
 {
 	// Emit the particle behind the player
 	var xOffset = -2 * face; // Adjust this value to control where particles appear
-	part_particles_create(part_sys, x + xOffset, y + 5, part_type, 1);
+	part_particles_create(part_sys, x + xOffset, y - 5, part_type, 1);
 }
 
 //Create the particle system
@@ -421,6 +421,33 @@ else
 }
 
 #endregion
+*/
+
+
+
+
+if (abs(xSpeed) > 0 && onGround) 
+{
+	var dust_x = x - 20 * face;
+	var dust_y = y - 5;
+
+	// Check if not inside the floor before creating
+	if (abs(xSpeed) > 0 && onGround && position_meeting(x, y + 1, eObject1))
+{
+	var dust_x = x - 20 * face;
+	var dust_y = y - 5;
+
+	instance_create_layer(dust_x, dust_y, "OG_Blocks", oParticleCrow);
+}
+}
+
+
+
+
+
+
+
+
 
 #region Sprites Etc
 // Sprite Controls

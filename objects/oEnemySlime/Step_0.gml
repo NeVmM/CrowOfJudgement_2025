@@ -1,5 +1,4 @@
-// === GRAVITY ===
-#region
+#region Gravity
 
 var grav = 0.5;
 ySpeed += grav;
@@ -7,8 +6,7 @@ ySpeed = clamp(ySpeed, -10, 10);
 
 #endregion
 
-// === TURN AROUND ON WALL COLLISION ===
-#region
+#region Turn Around On Wall Collision
 
 if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 {
@@ -17,8 +15,7 @@ if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 
 #endregion
 
-// === RANDOM WALK & TIMER (Left or Right) ===
-#region
+#region Random Walk & Random Timer Idle
 
 move_timer -= 1;
 
@@ -36,8 +33,7 @@ if (move_timer <= 0)
 
 #endregion
 
-// === HORIZONTAL MOVEMENT ===
-#region
+#region Horizontal Movement
 
 if (is_moving) 
 {
@@ -51,8 +47,7 @@ else
 
 #endregion
 
-// --- HORIZONTAL COLLISION ---
-#region
+#region Horizontal Collision
 
 if (place_meeting(x + xSpeed, y, eObject1))
 {
@@ -66,8 +61,7 @@ x += xSpeed;
 
 #endregion
 
-// --- VERTICAL COLLISION ---
-#region 
+#region Vertical Collision
 
 if (place_meeting(x, y + ySpeed, eObject1))
 {
@@ -87,8 +81,7 @@ if (is_moving)
 
 #endregion
 
-// === LEDGE DETECTION ===
-#region
+#region Ledge Detection (floor)
 
 // Look 1 pixel ahead in facing direction, and 1 pixel below that
 var checkX = x + 1;
@@ -112,7 +105,7 @@ if (!position_meeting(checkX, checkY, eObject1)) {
 
 
 // OTHER STUFF BELOW
-#region sprites
+#region Sprites Etc
 if (is_moving) 
 {
     sprite_index = Sprite_EnemySlime_Walking;
