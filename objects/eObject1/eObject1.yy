@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Sprite001",
-    "path":"sprites/Sprite001/Sprite001.yy",
+    "name":"Invisible_Block",
+    "path":"sprites/Invisible_Block/Invisible_Block.yy",
   },
   "spriteMaskId":null,
   "visible":true,
