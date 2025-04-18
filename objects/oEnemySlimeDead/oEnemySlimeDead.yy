@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"Object10",
+  "%Name":"oEnemySlimeDead",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Object10",
+  "name":"oEnemySlimeDead",
   "overriddenProperties":[],
   "parent":{
     "name":"EnemySlime",

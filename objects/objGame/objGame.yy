@@ -9,8 +9,8 @@
   "name":"objGame",
   "overriddenProperties":[],
   "parent":{
-    "name":"Test Objects",
-    "path":"folders/Test Objects.yy",
+    "name":"Music",
+    "path":"folders/Music.yy",
   },
   "parentObjectId":null,
   "persistent":false,

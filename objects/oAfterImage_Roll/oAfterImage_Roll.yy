@@ -9,8 +9,8 @@
   "name":"oAfterImage_Roll",
   "overriddenProperties":[],
   "parent":{
-    "name":"Test Objects",
-    "path":"folders/Test Objects.yy",
+    "name":"Crow",
+    "path":"folders/Character_Sprite/Crow.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,8 +6,8 @@
   "name":"eObject1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Test Objects",
-    "path":"folders/Test Objects.yy",
+    "name":"Blocks",
+    "path":"folders/Blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

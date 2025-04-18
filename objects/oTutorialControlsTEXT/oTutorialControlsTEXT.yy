@@ -8,8 +8,8 @@
   "name":"oTutorialControlsTEXT",
   "overriddenProperties":[],
   "parent":{
-    "name":"CrowOfJudgement_ROLLUpdate(backup)",
-    "path":"CrowOfJudgement_ROLLUpdate(backup).yyp",
+    "name":"Test Objects",
+    "path":"folders/Test Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PlayerStateAttack",
   "parent":{
-    "name":"CrowOfJudgement_ROLLUpdate(backup)",
-    "path":"CrowOfJudgement_ROLLUpdate(backup).yyp",
+    "name":"Test Objects",
+    "path":"folders/Test Objects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
