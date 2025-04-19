@@ -1,8 +1,4 @@
 //Player Input Controls (Key_Configures)
-
-//Kenneth here~! 
-// WAZZUP DAWG! WASUASDA
-
 getControls();
 
 
