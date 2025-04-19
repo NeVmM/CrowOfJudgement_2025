@@ -1,6 +1,7 @@
 //Custom functions for player
 function setOnGround(_val = true)
 {
+
 	if _val == true
 	{
 		onGround = true;
