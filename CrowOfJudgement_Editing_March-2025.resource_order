@@ -9,12 +9,12 @@
     {"name":"EnemyEye","order":3,"path":"folders/Character_Sprite/EnemyEye.yy",},
     {"name":"EnemyFireling","order":4,"path":"folders/Character_Sprite/EnemyFireling.yy",},
     {"name":"EnemySlime","order":1,"path":"folders/Character_Sprite/EnemySlime.yy",},
-    {"name":"Transtion","order":12,"path":"folders/Transtion.yy",},
     {"name":"Main Menu","order":11,"path":"folders/Main Menu.yy",},
     {"name":"Music","order":5,"path":"folders/Music.yy",},
     {"name":"Room Switcher","order":3,"path":"folders/Rooms/Room Switcher.yy",},
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Test Objects","order":3,"path":"folders/Test Objects.yy",},
+    {"name":"Transtion","order":12,"path":"folders/Transtion.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"eObject1","order":1,"path":"objects/eObject1/eObject1.yy",},
