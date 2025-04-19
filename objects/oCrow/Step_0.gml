@@ -211,6 +211,7 @@ if (i_frames)
 }
 #endregion
 
+
 //_________________________________________________________________________________________
 // X-Collision stuff
 #region
@@ -317,7 +318,7 @@ else
         if (onGround)
         {
             attack_cooldown = attack_max; // Set cooldown timer
-            instance_create_layer(x, y, "Weapon", oWeapon); // Create weapon instance
+            instance_create_layer(x, y, "Weapon", oCrowWeapon); // Create weapon instance
         }
     }
 }
@@ -336,7 +337,7 @@ if (!onGround && attackKey && airAttackCount < 3)
     grav = 0;           // Disable gravity temporarily
 
     // Create weapon instance for the attack
-    instance_create_layer(x, y, "Weapon", oWeapon);
+    instance_create_layer(x, y, "Weapon", oCrowWeapon);
 }
 
 // Stop attacks after 3 air attacks
@@ -378,6 +379,11 @@ if (onGround)
 
 
 
+
+
+// --- OTHER STUFF BELOW ---
+
+#region OLD Built-In PARTICLE (NOT IN USED)
 //=========================================================================================
 //OTHER STUFF BELOW
 //=========================================================================================
@@ -422,9 +428,9 @@ else
 
 #endregion
 */
+#endregion
 
-
-
+#region New Better Particle (USED)
 
 if (abs(xSpeed) > 0 && onGround) 
 {
@@ -433,21 +439,15 @@ if (abs(xSpeed) > 0 && onGround)
 
 	// Check if not inside the floor before creating
 	if (abs(xSpeed) > 0 && onGround && position_meeting(x, y + 1, eObject1))
-{
-	var dust_x = x - 20 * face;
-	var dust_y = y - 5;
+	{
+		var dust_x = x - 20 * face;
+		var dust_y = y - 5;
 
-	instance_create_layer(dust_x, dust_y, "OG_Blocks", oParticleCrow);
+		instance_create_layer(dust_x, dust_y, "OG_Blocks", oParticleCrow);
+	}
 }
-}
 
-
-
-
-
-
-
-
+#endregion
 
 #region Sprites Etc
 // Sprite Controls
@@ -514,4 +514,4 @@ mask_index = Sprite_GlideIdle;
 
 #endregion
 
-// UPDATED IN APRIL 17
+// UPDATED IN APRIL 19

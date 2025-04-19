@@ -17,6 +17,7 @@ function setOnGround(_val = true)
 controlsSetup();
 
 
+
 #region //Sprites
 
 maskSprite = Sprite_Idle;
@@ -25,7 +26,7 @@ runSprite = Sprite_Run;
 jumpSprite1 = Sprite_1Jump;
 jumpSprite2 = Sprite_2Jump;
 glideSprite = Sprite_Glide;
-//jumpSprite2 = Sprite_2Jump;
+jumpSprite2 = Sprite_2Jump;
 rollSprite = Sprite_Roll;
 
 #endregion
