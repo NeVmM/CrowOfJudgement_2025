@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Sprite_EnemyEye_Idle",
-    "path":"sprites/Sprite_EnemyEye_Idle/Sprite_EnemyEye_Idle.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

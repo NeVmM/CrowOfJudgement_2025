@@ -13,3 +13,5 @@ is_moving = true; // starts moving
 
 dead = false;
 
+
+just_hit = 0

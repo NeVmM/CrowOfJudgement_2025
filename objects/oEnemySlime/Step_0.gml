@@ -94,6 +94,10 @@ if (!position_meeting(checkX, checkY, eObject1)) {
 #endregion
 
 
+ if (just_hit > 0)
+{
+    just_hit--;
+}
 
  
  
@@ -103,7 +107,8 @@ if (!position_meeting(checkX, checkY, eObject1)) {
  
  
 
-// --- OTHER STUFF BELOW ---
+
+// OTHER STUFF BELOW
 #region Sprites Etc
 if (is_moving) 
 {
