@@ -392,30 +392,11 @@ if (exitGame)
 
 
 
-//TESTING PURPOSES
-
-if (place_meeting(x, y, oTransfer) && canTransfer)
-{
-	LevelLimiter++;
-	
-	if (LevelLimiter == 2)
-	{
-		game_end();
-		exit;
-	}
-}
-
-if (!place_meeting(x,y, oTransfer))
-{
-	canTransfer = true;
-}
 
 
 
 
-
-
-// --- OTHER STUFF BELOW ---
+// --- OTHER STUFF BELOW ---   ============================================================
 
 #region OLD Built-In PARTICLE (NOT IN USED)
 //=========================================================================================

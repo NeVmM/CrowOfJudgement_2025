@@ -113,6 +113,3 @@ airAttackCount = 0; // Tracks if the player has attacked mid-air
 #endregion
 
 
-
-LevelLimiter = 0;
-canTransfer = true;
