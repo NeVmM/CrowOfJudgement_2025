@@ -35,6 +35,7 @@
     {"name":"oGrassAnimation_TEST","order":9,"path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},
     {"name":"oHazard","order":5,"path":"objects/oHazard/oHazard.yy",},
     {"name":"oParticleCrow","order":13,"path":"objects/oParticleCrow/oParticleCrow.yy",},
+    {"name":"oRoomLimiter","order":2,"path":"objects/oRoomLimiter/oRoomLimiter.yy",},
     {"name":"oTutorialControlsTEXT","order":1,"path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},
     {"name":"rm_MainMenu","order":5,"path":"rooms/rm_MainMenu/rm_MainMenu.yy",},
     {"name":"Room2","order":4,"path":"rooms/Room2/Room2.yy",},
