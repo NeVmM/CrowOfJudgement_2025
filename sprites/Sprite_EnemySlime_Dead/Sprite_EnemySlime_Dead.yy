@@ -41,7 +41,7 @@
   "origin":9,
   "parent":{
     "name":"EnemySlime",
-    "path":"folders/Character_Sprite/EnemySlime.yy",
+    "path":"folders/Characters_Hazards/Enemies/EnemySlime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

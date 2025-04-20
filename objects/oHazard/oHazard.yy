@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oEnemyArmsDead",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oHazard",
+  "eventList":[],
   "managed":true,
-  "name":"oEnemyArmsDead",
+  "name":"oHazard",
   "overriddenProperties":[],
   "parent":{
-    "name":"EnemyArms",
-    "path":"folders/Characters_Hazards/Enemies/EnemyArms.yy",
+    "name":"Enemies",
+    "path":"folders/Characters_Hazards/Enemies.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oBad",
+    "path":"objects/oBad/oBad.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite_EnemyArms_Dead",
-    "path":"sprites/Sprite_EnemyArms_Dead/Sprite_EnemyArms_Dead.yy",
+    "name":"sSpikeHazard",
+    "path":"sprites/sSpikeHazard/sSpikeHazard.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -372,6 +372,17 @@ if (onGround)
 
 #endregion
 
+#region ENEMIES
+
+if (place_meeting(x,y,oBad))
+{
+	game_restart();
+}
+
+#endregion
+
+
+
 
 
 

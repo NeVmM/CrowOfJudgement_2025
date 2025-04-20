@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oCrow_RollFade",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oBad",
+  "eventList":[],
   "managed":true,
-  "name":"oCrow_RollFade",
+  "name":"oBad",
   "overriddenProperties":[],
   "parent":{
-    "name":"Crow_Player",
-    "path":"folders/Characters_Hazards/Crow_Player.yy",
+    "name":"Enemies",
+    "path":"folders/Characters_Hazards/Enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Sprite_Roll",
-    "path":"sprites/Sprite_Roll/Sprite_Roll.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

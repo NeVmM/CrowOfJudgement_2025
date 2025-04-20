@@ -11,8 +11,8 @@
   "name":"oParticleCrow",
   "overriddenProperties":[],
   "parent":{
-    "name":"Crow",
-    "path":"folders/Character_Sprite/Crow.yy",
+    "name":"Crow_Player",
+    "path":"folders/Characters_Hazards/Crow_Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

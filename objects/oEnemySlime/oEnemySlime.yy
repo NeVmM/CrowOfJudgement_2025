@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"EnemySlime",
-    "path":"folders/Character_Sprite/EnemySlime.yy",
+    "path":"folders/Characters_Hazards/Enemies/EnemySlime.yy",
   },
   "parentObjectId":null,
   "persistent":false,
