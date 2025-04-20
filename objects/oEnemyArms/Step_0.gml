@@ -6,7 +6,7 @@ ySpeed = clamp(ySpeed, -10, 10);
 
 #endregion
 
-#region Turn Around on Wall Collision
+#region Turn Around On Wall Collision
 
 if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 {
@@ -35,11 +35,14 @@ if (move_timer <= 0)
 
 #region Horizontal Movement
 
-if (is_moving) {
+if (is_moving) 
+{
     xSpeed = moveSpeed * facing;
-} else {
+} 
+else 
+{
     xSpeed = 0;
-	sprite_index = Sprite_EnemySlime_Idle;
+	sprite_index = Sprite_EnemyArms_Idle;
 }
 
 #endregion
@@ -58,7 +61,7 @@ x += xSpeed;
 
 #endregion
 
-#region Vertical COllision
+#region Vertical Collision
 
 if (place_meeting(x, y + ySpeed, eObject1))
 {
@@ -91,18 +94,22 @@ if (!position_meeting(checkX, checkY, eObject1)) {
 #endregion
 
 
+ if (just_hit > 0)
+{
+    just_hit--;
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
-
-
-
-
-
-
-
-// --- OTHER STUFF BELOW ---
-#region sprites
-
+// OTHER STUFF BELOW
+#region Sprites Etc
 if (is_moving) 
 {
     sprite_index = Sprite_EnemyArms_Walking;
@@ -111,5 +118,6 @@ else
 {
     sprite_index = Sprite_EnemyArms_Idle;
 }
-
 #endregion
+
+
