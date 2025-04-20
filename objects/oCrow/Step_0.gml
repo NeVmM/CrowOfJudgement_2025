@@ -514,7 +514,5 @@ mask_index = Sprite_GlideIdle;
 
 #endregion
 
-// UPDATED IN APRIL 19
+// UPDATED IN APRIL 20
 
-
-// TESTING FOR GITHUB DESKTOP

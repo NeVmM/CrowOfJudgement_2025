@@ -1,6 +1,3 @@
-randomize();
-
-
 var pick = irandom(1);
 
 if (pick == 0)
@@ -11,4 +8,3 @@ if (pick == 1)
 {
 	room_goto(rm_room2);
 }
-

@@ -32,7 +32,6 @@ rollSprite = Sprite_Roll;
 
 #endregion
 
-
 #region //Movement
 
 face = 1;
@@ -43,13 +42,11 @@ ySpeed = 0;
 
 #endregion
 
-
 #region //Ground Detection
 
 is_on_ground = false; // Default to false (airborne)
 
 #endregion
-
 
 #region //Jumping
 
@@ -70,7 +67,6 @@ jumpPower = 0.5;
 
 
 #endregion
-	
 
 #region //Rolling & I-frames
 
@@ -89,7 +85,6 @@ i_frame_duration = 30;
 	
 #endregion
 
-
 #region //Coyote Time
 
 //Hang Time
@@ -101,7 +96,6 @@ coyoteJumpTimer = 0;
 
 #endregion
 
-
 #region //Attack
 
 attack_cooldown = 0;
@@ -110,7 +104,6 @@ stateAttack = AttackSlash;
 
 #endregion
 
-
 #region //Air Float & Air_Attack Timer
 
 airFloatTimer = 0; // 60 is equal to 1 sec
@@ -118,4 +111,7 @@ floating = false; // Track if floating is active
 airAttackCount = 0; // Tracks if the player has attacked mid-air
 
 #endregion
+
+
+
 
