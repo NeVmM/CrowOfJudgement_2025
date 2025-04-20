@@ -25,7 +25,7 @@ if (pick == 2)
 
 /*
 
-//Testing if works
+//This code also works
 if (mouse_check_button_pressed(mb_left))
 {
 	room_goto(Room1);

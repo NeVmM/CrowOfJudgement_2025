@@ -1,4 +1,4 @@
 sprite_index = sNewGameB;
 
-// when hover NewGame(NOT Pressed) - Sprite
+// Mouse Leave (means not hovering)
 

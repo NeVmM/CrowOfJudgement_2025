@@ -372,7 +372,7 @@ if (onGround)
 
 #endregion
 
-#region ENEMIES
+#region ENEMIES (Specifically TRAP/SPIKES)
 
 if (place_meeting(x,y,oBad))
 {
@@ -381,11 +381,34 @@ if (place_meeting(x,y,oBad))
 
 #endregion
 
+#region Pause/Exit
+
+if (exitGame)
+{
+	game_end();
+}
+
+#endregion
 
 
 
+//TESTING PURPOSES
 
+if (place_meeting(x, y, oTransfer) && canTransfer)
+{
+	LevelLimiter++;
+	
+	if (LevelLimiter == 2)
+	{
+		game_end();
+		exit;
+	}
+}
 
+if (!place_meeting(x,y, oTransfer))
+{
+	canTransfer = true;
+}
 
 
 

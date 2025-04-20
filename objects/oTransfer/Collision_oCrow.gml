@@ -1,3 +1,5 @@
+randomize();
+
 var pick = irandom(2);
 
 if (pick == 0)
