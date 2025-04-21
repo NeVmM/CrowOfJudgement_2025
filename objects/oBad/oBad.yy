@@ -6,8 +6,8 @@
   "name":"oBad",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Characters_Hazards/Enemies.yy",
+    "name":"Traps_Spikes",
+    "path":"folders/Characters_Hazards/Traps_Spikes.yy",
   },
   "parentObjectId":null,
   "persistent":false,
