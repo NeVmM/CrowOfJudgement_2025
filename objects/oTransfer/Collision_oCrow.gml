@@ -1,10 +1,29 @@
-var pick = irandom(1);
+randomize();
 
-if (pick == 0)
+
+
+
+
+var pick = irandom(3);
+oRoomLimiter.roomLimit += 1;
+
+show_debug_message("Teleport #:" + string(oRoomLimiter.roomLimit) + " | Max " + string(oRoomLimiter.maxTeleport));
+
+if (oRoomLimiter.roomLimit >= oRoomLimiter.maxTeleport)
 {
-	room_goto(Room1);
+	game_restart();
 }
-if (pick == 1)
+
+else
 {
-	room_goto(rm_room2);
+	
+if (pick == 0)
+	room_goto(Room1);
+if (pick == 1)
+	room_goto(Room2);
+if (pick == 2)
+	room_goto(Room3);
+if (pick == 3)
+	room_goto(Room4);
+	
 }

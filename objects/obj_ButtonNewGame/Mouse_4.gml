@@ -1,7 +1,7 @@
 randomize();
 
 //Randomizer Code (TESTNIG PURPOSES)
-var pick = irandom(1);
+var pick = irandom(2);
 
 if (pick == 0)
 {
@@ -9,9 +9,12 @@ if (pick == 0)
 }
 if (pick == 1)
 {
-	room_goto(rm_room2);
+	room_goto(Room2);
 }
-
+if (pick == 2)
+{
+	room_goto(Room3);
+}
 
 
 
@@ -22,7 +25,7 @@ if (pick == 1)
 
 /*
 
-//Testing if works
+//This code also works
 if (mouse_check_button_pressed(mb_left))
 {
 	room_goto(Room1);

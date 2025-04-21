@@ -57,7 +57,7 @@
   "origin":9,
   "parent":{
     "name":"EnemyEye",
-    "path":"folders/Character_Sprite/EnemyEye.yy",
+    "path":"folders/Characters_Hazards/Enemies/EnemyEye.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

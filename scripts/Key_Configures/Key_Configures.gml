@@ -47,15 +47,12 @@ function getControls()
 		jumpKeyBuffered = 0;
 	}
 	
-	
-	
-
-	
-	
-	
-
+	exitGame = keyboard_check_pressed(vk_escape);
 	
 }
+
+
+
 
 
 

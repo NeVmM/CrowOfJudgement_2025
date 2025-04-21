@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"EnemyArms",
-    "path":"folders/Character_Sprite/EnemyArms.yy",
+    "path":"folders/Characters_Hazards/Enemies/EnemyArms.yy",
   },
   "parentObjectId":null,
   "persistent":false,

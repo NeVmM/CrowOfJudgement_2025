@@ -372,6 +372,23 @@ if (onGround)
 
 #endregion
 
+#region ENEMIES (Specifically TRAP/SPIKES)
+
+if (place_meeting(x,y,oBad))
+{
+	game_restart();
+}
+
+#endregion
+
+#region Pause/Exit
+
+if (exitGame)
+{
+	game_end();
+}
+
+#endregion
 
 
 
@@ -379,9 +396,7 @@ if (onGround)
 
 
 
-
-
-// --- OTHER STUFF BELOW ---
+// --- OTHER STUFF BELOW ---   ============================================================
 
 #region OLD Built-In PARTICLE (NOT IN USED)
 //=========================================================================================
