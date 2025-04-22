@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oTransfer",
+  "%Name":"oPortal",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"oCrow","path":"objects/oCrow/oCrow.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTransfer",
+  "name":"oPortal",
   "overriddenProperties":[],
   "parent":{
     "name":"Room Switcher",
