@@ -1,0 +1,1 @@
+game_end() // after 3 secs closes compiler

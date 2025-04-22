@@ -15,7 +15,10 @@
     "name":"EnemySlime",
     "path":"folders/Characters_Hazards/Enemies/EnemySlime.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oEnemyFollow",
+    "path":"objects/oEnemyFollow/oEnemyFollow.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
