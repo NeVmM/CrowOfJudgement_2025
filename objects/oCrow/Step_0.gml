@@ -374,10 +374,57 @@ if (onGround)
 
 #region ENEMIES (Specifically TRAP/SPIKES)
 
-if (place_meeting(x,y,oBad))
-{
-	game_restart();
+#region trpmusic
+// Assuming health decreases due to traps or other factors:
+
+// Trap damage logic: health decreases by 1 every second if the player is touching a trap
+if (place_meeting(x, y, oBad)) {
+    if (trap_timer == undefined) {
+        trap_timer = 0;
+    }
+    
+    trap_timer += 1;  // Increment timer by 1 every frame
+    
+    // Every second (room_speed FPS), decrease health by 1
+    if (trap_timer >= room_speed) {
+        if (health > 0) {
+            health -= 5;  // Decrease health by 1 per second
+        }
+
+        trap_timer = 0;  // Reset the trap timer after applying damage
+    }
+} else {
+    trap_timer = 0;  // Reset trap timer if no trap collision
 }
+
+// **Health regeneration logic**
+// Only regenerate health if health is not decreasing (no trap damage happening)
+if (health > 0) {
+    // If no trap damage is happening (health is not decreasing)
+    if (!place_meeting(x, y, oBad)) {
+        if (regen_timer >= 60 && health < 100) {
+            // Regenerate health by 0.1, but make sure it doesn't exceed 100
+            health += 0.1;
+            if (health > 100) {
+                health = 100;  // Clamp health to max 100
+            }
+
+            regen_timer = 0;  // Reset regen timer after applying regen
+        } else {
+            regen_timer += 1;  // Increase regen timer if not regenerating
+        }
+    } else {
+        regen_timer = 0;  // Reset regen timer if health is being decreased (due to trap)
+    }
+}
+
+// If health reaches 0, restart the game
+if (health <= 0) {
+    health = 0;  // Ensure health doesn't go below 0
+    game_restart();  // Restart the game when health is 0
+}
+
+#endregion
 
 #endregion
 
@@ -533,3 +580,16 @@ mask_index = Sprite_GlideIdle;
 
 // UPDATED IN APRIL 21 - 2025
 
+#region //healthbar ni musico eyy
+regen_timer += 1; // Increment every step
+
+// Every 60 steps (1 second), add 0.1 health
+if (regen_timer >= 60) {
+    health += 1;
+    regen_timer = 0; // Reset timer
+}
+
+// Clamp health so it doesn't go over 100
+health = clamp(health, 0, 100);
+
+#endregion
