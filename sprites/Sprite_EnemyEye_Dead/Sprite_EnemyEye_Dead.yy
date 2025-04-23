@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"Sprite_EnemyEye_Dead",
   "bboxMode":2,
-  "bbox_bottom":46,
+  "bbox_bottom":45,
   "bbox_left":13,
   "bbox_right":49,
   "bbox_top":8,
@@ -57,7 +57,7 @@
   "origin":9,
   "parent":{
     "name":"EnemyEye",
-    "path":"folders/Characters_Hazards/Enemies/EnemyEye.yy",
+    "path":"folders/Characters_and_Spike/Enemies/EnemyEye.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

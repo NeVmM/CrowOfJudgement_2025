@@ -12,9 +12,12 @@
   "overriddenProperties":[],
   "parent":{
     "name":"EnemyEye",
-    "path":"folders/Characters_Hazards/Enemies/EnemyEye.yy",
+    "path":"folders/Characters_and_Spike/Enemies/EnemyEye.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oEnemyFollow",
+    "path":"objects/oEnemyFollow/oEnemyFollow.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

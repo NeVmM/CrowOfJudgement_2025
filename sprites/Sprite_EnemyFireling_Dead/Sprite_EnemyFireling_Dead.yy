@@ -38,7 +38,7 @@
   "origin":9,
   "parent":{
     "name":"EnemyFireling",
-    "path":"folders/Characters_Hazards/Enemies/EnemyFireling.yy",
+    "path":"folders/Characters_and_Spike/Enemies/EnemyFireling.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

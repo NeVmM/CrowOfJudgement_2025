@@ -112,4 +112,16 @@ airAttackCount = 0; // Tracks if the player has attacked mid-air
 
 #endregion
 
+#region	//hp
+hp = 100;
+hp_max = hp;
+regen_timer = 0;
+trap_timer = 0;
+//healthbar_width = 100;
+//healthbar_height = 10;
+//healthbar_x =(320/2) - (healthbar_width/2);
+//healthbar_y = ystart-100;;
 
+
+flash = 0;
+#endregion

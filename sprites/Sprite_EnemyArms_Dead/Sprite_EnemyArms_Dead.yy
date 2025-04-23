@@ -45,7 +45,7 @@
   "origin":9,
   "parent":{
     "name":"EnemyArms",
-    "path":"folders/Characters_Hazards/Enemies/EnemyArms.yy",
+    "path":"folders/Characters_and_Spike/Enemies/EnemyArms.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

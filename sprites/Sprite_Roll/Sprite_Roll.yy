@@ -47,7 +47,7 @@
   "origin":9,
   "parent":{
     "name":"Crow_Player",
-    "path":"folders/Characters_Hazards/Crow_Player.yy",
+    "path":"folders/Characters_and_Spike/Crow_Player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
