@@ -4,9 +4,6 @@ if (flash > 0)
 {
 	flash--;
 	shader_set(shWhite);
-	var prev_scale = image_xscale;
-	image_xscale = face; // Flip sprite based on direction
 	draw_self();
-	image_xscale = prev_scale; // Restore scale so it doesn't affect other things
 	shader_reset();
 }
