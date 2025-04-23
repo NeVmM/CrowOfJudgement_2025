@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Traps_Spikes",
-    "path":"folders/Characters_Hazards/Traps_Spikes.yy",
+    "path":"folders/Characters_and_Spike/Traps_Spikes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

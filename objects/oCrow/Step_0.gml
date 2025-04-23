@@ -372,56 +372,59 @@ if (onGround)
 
 #endregion
 
-#region ENEMIES (Specifically TRAP/SPIKES)
+#region Spike and HP Mechanics
 
-#region trpmusic
+#region Healthbar ni Musico
+
 // Assuming health decreases due to traps or other factors:
 
 // Trap damage logic: health decreases by 1 every second if the player is touching a trap
-if (place_meeting(x, y, oBad)) {
-    if (trap_timer == undefined) {
-        trap_timer = 0;
-    }
-    
-    trap_timer += 1;  // Increment timer by 1 every frame
-    
-    // Every second (room_speed FPS), decrease health by 1
-    if (trap_timer >= room_speed) {
-        if (health > 0) {
-            health -= 5;  // Decrease health by 1 per second
-        }
 
-        trap_timer = 0;  // Reset the trap timer after applying damage
+if (place_meeting(x, y, oBad)) // Player collides with oBad (trap)
+{
+    // If alarm[0] is not active, damage immediately and set alarm to trigger again in 2 seconds (room_speed * 2)
+    if (alarm[0] == -1) 
+	{
+        if (health > 0) 
+		{
+            health -= 25;  // Decrease health by x digit
+            alarm[0] = room_speed * 1.3;  // Set alarm to trigger after 1.3 seconds
+        }
     }
-} else {
-    trap_timer = 0;  // Reset trap timer if no trap collision
 }
 
 // **Health regeneration logic**
 // Only regenerate health if health is not decreasing (no trap damage happening)
-if (health > 0) {
-    // If no trap damage is happening (health is not decreasing)
-    if (!place_meeting(x, y, oBad)) {
-        if (regen_timer >= 60 && health < 100) {
-            // Regenerate health by 0.1, but make sure it doesn't exceed 100
-            health += 0.1;
-            if (health > 100) {
+if (health > 0) 
+{
+    if (!place_meeting(x, y, oBad)) 
+	{
+        // If health is not being decreased by trap, regenerate
+        if (regen_timer >= 60 && health < 100) 
+		{
+            health += 1;  // Regenerate health by 1 per step
+            if (health > 100) 
+			{
                 health = 100;  // Clamp health to max 100
             }
-
-            regen_timer = 0;  // Reset regen timer after applying regen
-        } else {
-            regen_timer += 1;  // Increase regen timer if not regenerating
-        }
-    } else {
-        regen_timer = 0;  // Reset regen timer if health is being decreased (due to trap)
+            regen_timer = 0;  // Reset regen timer
+        } 
+		else 
+		{
+            regen_timer += 1;  // Increase regen timer
+        }	
+    } 
+	else 
+	{
+        regen_timer = 0;  // Reset regen timer if trap is active
     }
 }
 
 // If health reaches 0, restart the game
-if (health <= 0) {
-    health = 0;  // Ensure health doesn't go below 0
+if (health <= 0) 
+{
     game_restart();  // Restart the game when health is 0
+	health = 100; //set back hp to 100 so you can start a new run again
 }
 
 #endregion
@@ -439,7 +442,17 @@ if (exitGame)
 
 
 
+
+
+
+
+
+
 //NEED TO DO ATTACK ENEMY, WHAT TO DOOOOOOOOOOOOO DONT KNOW WHAT TO DOO AAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+
+
+
+
 
 
 
@@ -580,16 +593,3 @@ mask_index = Sprite_GlideIdle;
 
 // UPDATED IN APRIL 21 - 2025
 
-#region //healthbar ni musico eyy
-regen_timer += 1; // Increment every step
-
-// Every 60 steps (1 second), add 0.1 health
-if (regen_timer >= 60) {
-    health += 1;
-    regen_timer = 0; // Reset timer
-}
-
-// Clamp health so it doesn't go over 100
-health = clamp(health, 0, 100);
-
-#endregion

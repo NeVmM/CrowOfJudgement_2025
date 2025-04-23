@@ -81,7 +81,6 @@ if (is_moving)
 
 #endregion
 
-
 #region Ledge Detection (floor)
 
 // Look ahead in the facing direction, and check just below that

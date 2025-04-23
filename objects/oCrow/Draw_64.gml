@@ -1,43 +1,46 @@
-// Player Draw GUI Event
+// Player Draw GUI Event (Manual Health Bar)
 
-// Position of the health bar
-var bar_x = 20;
+// Position of the health bar on screen
+var bar_x = 100	;
 var bar_y = 20;
 
-// Dimensions for the health bar (these are the same as the sprites)
-var bar_width = 103;  // Width of the health bar
-var bar_height = 18;  // Height of the health bar
+// Dimensions of the bar
+var bar_width = 220;
+var bar_height = 20;
 
-// Health percent (0.0 to 1.0)
-var health_percent = health / 100;
+// Health calculation
+var health_percent = clamp(health / 100, 0, 1);
 
-// **Draw the background** (using the spr_healthbg sprite)
-// Position the background at the top-left corner
-draw_sprite(spr_healthbg, 0, bar_x, bar_y);
+// Colors
+var border_color = c_black;
+var fill_color = c_red;
+var text_color = c_white;
 
-// **Set health bar color**
-var health_bar_color = c_lime; // Default color is green
+// Outline thickness
+var outline_thickness = 6;
 
-// If health is less than 2%, change to red
-if (health_percent < 0.02) {
-    health_bar_color = c_red; // Change to red if below 2%
+// Draw thicker border by layering multiple rectangles
+draw_set_color(border_color);
+for (var i = 0; i < outline_thickness; i++) {
+    draw_rectangle(
+        bar_x - i, 
+        bar_y - i, 
+        bar_x + bar_width + i, 
+        bar_y + bar_height + i, 
+        false
+    );
 }
 
-// **Draw the health bar** (using the spr_healthbar sprite)
-// The width of the health bar should be proportional to the current health
-var health_bar_width = bar_width * health_percent;
+// Draw inner red bar
+draw_set_color(fill_color);
+draw_rectangle(bar_x, bar_y, bar_x + bar_width * health_percent, bar_y + bar_height, false);
 
-// Use the chosen color for the health bar
-draw_set_color(health_bar_color);
+// Draw text
+draw_set_color(text_color);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_text(bar_x + bar_width / 2, bar_y + bar_height / 2, string(round(health)) + "/100");
 
-// **Draw a portion of the health bar** using the width calculated from health percent
-// This draws the health bar portion based on health, from left to right
-draw_sprite_part(spr_healthbar, 0, 0, 0, health_bar_width, bar_height, bar_x-4, bar_y-4);
-
-// **Draw the border** (using the spr_healthborder sprite)
-// The border will sit on top of the background and health bar
-draw_sprite(spr_healthborder, 0, bar_x, bar_y);  // This will draw the border on top
-
-// Optional: Text to show health value
-draw_set_color(c_white);
-draw_text(bar_x + bar_width + 10, bar_y, string_format(health, 1, 1) + " / 100");
+// Reset alignment
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

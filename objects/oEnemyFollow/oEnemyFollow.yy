@@ -8,8 +8,8 @@
   "name":"oEnemyFollow",
   "overriddenProperties":[],
   "parent":{
-    "name":"Characters_Hazards",
-    "path":"folders/Characters_Hazards.yy",
+    "name":"Characters_and_Spike",
+    "path":"folders/Characters_and_Spike.yy",
   },
   "parentObjectId":null,
   "persistent":false,

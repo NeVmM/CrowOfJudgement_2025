@@ -114,6 +114,7 @@
     {"name":"inst_36192DC6","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_63D82639","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_41A7199C","path":"rooms/Room3/Room3.yy",},
+    {"name":"inst_7E76ACFD","path":"rooms/Room3/Room3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -147,6 +148,7 @@
         {"$GMRInstance":"","%Name":"inst_587838D7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_587838D7","objectId":{"name":"oEnemyFireling","path":"objects/oEnemyFireling/oEnemyFireling.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":704.0,},
         {"$GMRInstance":"","%Name":"inst_36192DC6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36192DC6","objectId":{"name":"oEnemySlime","path":"objects/oEnemySlime/oEnemySlime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":640.0,},
         {"$GMRInstance":"","%Name":"inst_63D82639","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63D82639","objectId":{"name":"oEnemySlime","path":"objects/oEnemySlime/oEnemySlime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":544.0,},
+        {"$GMRInstance":"","%Name":"inst_7E76ACFD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7E76ACFD","objectId":{"name":"oEenmySkelly","path":"objects/oEenmySkelly/oEenmySkelly.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":320.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Weapon","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_13B88B49","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13B88B49","objectId":{"name":"oCrowWeapon","path":"objects/oCrowWeapon/oCrowWeapon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
