@@ -1,3 +1,5 @@
+#region Draws Player HealthBar
+
 // Player Draw GUI Event (Manual Health Bar)
 
 // Position of the health bar on screen
@@ -44,3 +46,5 @@ draw_text(bar_x + bar_width / 2, bar_y + bar_height / 2, string(round(health)) +
 // Reset alignment
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+#endregion

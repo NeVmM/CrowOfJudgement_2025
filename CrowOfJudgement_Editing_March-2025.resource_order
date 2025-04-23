@@ -30,7 +30,7 @@
     {"name":"oCrow_RollFade","order":12,"path":"objects/oCrow_RollFade/oCrow_RollFade.yy",},
     {"name":"oCrowWeapon","order":1,"path":"objects/oCrowWeapon/oCrowWeapon.yy",},
     {"name":"oDeathTimer","order":15,"path":"objects/oDeathTimer/oDeathTimer.yy",},
-    {"name":"oEenmySkelly","order":3,"path":"objects/oEenmySkelly/oEenmySkelly.yy",},
+    {"name":"oEenemySkelly","order":3,"path":"objects/oEenemySkelly/oEenemySkelly.yy",},
     {"name":"oEnemyArmsDead","order":4,"path":"objects/oEnemyArmsDead/oEnemyArmsDead.yy",},
     {"name":"oEnemyEyeDead","order":4,"path":"objects/oEnemyEyeDead/oEnemyEyeDead.yy",},
     {"name":"oEnemyFirelingDead","order":1,"path":"objects/oEnemyFirelingDead/oEnemyFirelingDead.yy",},

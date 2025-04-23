@@ -56,7 +56,7 @@
     {"id":{"name":"oCrow","path":"objects/oCrow/oCrow.yy",},},
     {"id":{"name":"oCrowWeapon","path":"objects/oCrowWeapon/oCrowWeapon.yy",},},
     {"id":{"name":"oDeathTimer","path":"objects/oDeathTimer/oDeathTimer.yy",},},
-    {"id":{"name":"oEenmySkelly","path":"objects/oEenmySkelly/oEenmySkelly.yy",},},
+    {"id":{"name":"oEenemySkelly","path":"objects/oEenemySkelly/oEenemySkelly.yy",},},
     {"id":{"name":"oEnemyArms","path":"objects/oEnemyArms/oEnemyArms.yy",},},
     {"id":{"name":"oEnemyArmsDead","path":"objects/oEnemyArmsDead/oEnemyArmsDead.yy",},},
     {"id":{"name":"oEnemyEye","path":"objects/oEnemyEye/oEnemyEye.yy",},},

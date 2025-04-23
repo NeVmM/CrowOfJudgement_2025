@@ -302,6 +302,7 @@ y += ySpeed;
 
 //_________________________________________________________________________________________
 
+
 #region Attack
 // Attack cooldown for normal attacks
 if (attack_cooldown > 0)
@@ -387,7 +388,7 @@ if (place_meeting(x, y, oBad)) // Player collides with oBad (trap)
 	{
         if (health > 0) 
 		{
-            health -= 25;  // Decrease health by x digit
+            health -= 20;  // Decrease health by x digit
             alarm[0] = room_speed * 1.3;  // Set alarm to trigger after 1.3 seconds
         }
     }

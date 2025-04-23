@@ -125,3 +125,5 @@ trap_timer = 0;
 
 flash = 0;
 #endregion
+
+flash = 0;
