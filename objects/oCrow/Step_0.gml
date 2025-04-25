@@ -195,9 +195,9 @@ if (!is_rolling)
 #region I-Frames (roll)
 
 // I-FRAMES (Rolling)
-if (i_frames)
+if (i_frames == false && is_rolling)
 {
-	/*if (collision_with_enemy)
+	/*if (collision_with_enemy attack)
 	{
 		//code here
 	}*/
@@ -302,6 +302,7 @@ y += ySpeed;
 
 //_________________________________________________________________________________________
 
+
 #region Attack
 // Attack cooldown for normal attacks
 if (attack_cooldown > 0)
@@ -376,22 +377,50 @@ if (onGround)
 
 #region Healthbar ni Musico
 
-// Assuming health decreases due to traps or other factors:
+// health decreases due to traps
 
-// Trap damage logic: health decreases by 1 every second if the player is touching a trap
-
-if (place_meeting(x, y, oBad)) // Player collides with oBad (trap)
+if (place_meeting(x, y, oBad) && flash_cooldown <= 0) // Player collides with oBad (trap)
 {
+	flash_count = 6; // 3 flashes = on/off/on/off/on/off
+    flash_timer = 3; // frames per flash (adjust as needed)
+    flash_cooldown = 30; // prevent re-trigger for 30 
+	
+	
+	shake_amount = 100; // adjust for intensity
+	shake_timer = 10; // how long the shake lasts
+	
+	with (oCamera) //Calls oCamera function and uses the coed applied to it (Screen Shake)
+	{
+		shake_amount = 4; // How intense the shake is
+		shake_timer = 10; // How long the shake lasts
+	}
+	
     // If alarm[0] is not active, damage immediately and set alarm to trigger again in 2 seconds (room_speed * 2)
     if (alarm[0] == -1) 
 	{
         if (health > 0) 
 		{
-            health -= 25;  // Decrease health by x digit
+            health -= 20;  // Decrease health by x digit
             alarm[0] = room_speed * 1.3;  // Set alarm to trigger after 1.3 seconds
         }
     }
 }
+
+if (flash_timer > 0)
+{
+    flash_timer--;
+}
+if (flash_count > 0)
+{
+    flash_count--;
+    flash_timer = 3;
+}
+
+if (flash_cooldown > 0)
+{
+    flash_cooldown--;
+}
+
 
 // **Health regeneration logic**
 // Only regenerate health if health is not decreasing (no trap damage happening)
@@ -440,15 +469,6 @@ if (exitGame)
 
 #endregion
 
-
-
-
-
-
-
-
-
-//NEED TO DO ATTACK ENEMY, WHAT TO DOOOOOOOOOOOOO DONT KNOW WHAT TO DOO AAAAAAAAAAAAAAAAAAAAAAAAAAAAa
 
 
 

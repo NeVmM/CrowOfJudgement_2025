@@ -100,7 +100,7 @@ coyoteJumpTimer = 0;
 
 attack_cooldown = 0;
 attack_max = 10; //numebr of frames before we can attack again
-stateAttack = AttackSlash;
+//stateAttack = AttackSlash;
 
 #endregion
 
@@ -112,7 +112,7 @@ airAttackCount = 0; // Tracks if the player has attacked mid-air
 
 #endregion
 
-#region	//hp
+#region	//HP Mechanics
 hp = 100;
 hp_max = hp;
 regen_timer = 0;
@@ -122,6 +122,16 @@ trap_timer = 0;
 //healthbar_x =(320/2) - (healthbar_width/2);
 //healthbar_y = ystart-100;;
 
-
 flash = 0;
 #endregion
+
+#region //Flash Effect Timer
+flash_timer = 0;
+flash_count = 0;
+flash_cooldown = 0; // to prevent instant retrigger
+#endregion
+
+
+flash = 0;
+hitfrom = 0;
+

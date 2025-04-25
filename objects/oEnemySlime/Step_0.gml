@@ -42,7 +42,7 @@ if (is_moving)
 else 
 {
     xSpeed = 0;
-	sprite_index = Sprite_EnemySlime_Idle;
+	sprite_index = Sprite_EnemySlime_Walking;
 }
 
 #endregion
@@ -107,20 +107,34 @@ if (instance_exists(_player))
     
     // Only follow if the player is nearby and horizontally aligned
     if (dist_x < 160 && dist_y < 16)
-    {
+    {		
         // Check if slime and player are standing on the same platform
         var slime_on_ground = position_meeting(x, y + 1, eObject1);
         var player_on_ground = position_meeting(_player.x, _player.y + 1, eObject1);
         
         if (slime_on_ground && player_on_ground)
         {
-            // Move toward the player
-            is_moving = true;
-            facing = sign(_player.x - x);
-			
-            
-            // Optional: reset the move_timer to prevent toggling back to idle while chasing
-            move_timer = 30;
+            // If the player is behind the enemy, flip direction immediately
+            if (_player.x < x && facing == 1)  // Player is to the left
+            {
+                facing = -1;  // Turn to face left
+            }
+            else if (_player.x > x && facing == -1)  // Player is to the right
+            {
+                facing = 1;  // Turn to face right
+            }
+
+            // If the distance is greater than 16 pixels, move towards player
+            if (dist_x > 50)
+            {
+                is_moving = true;
+                move_timer = 30; // prevent idle toggle
+            }
+            else
+            {
+                is_moving = false; // stop when close enough
+                xSpeed = 0;
+            }
         }
     }
 }
@@ -128,6 +142,44 @@ if (instance_exists(_player))
 #endregion
 
 
+#region Attack Behavior
+
+var _player = instance_nearest(x, y, oCrow);
+
+// Only attack if the player exists
+if (instance_exists(_player))
+{
+    var dist_x = abs(_player.x - x);
+    var dist_y = abs(_player.y - y);
+
+    var on_same_ground = position_meeting(x, y + 1, eObject1) && position_meeting(_player.x, _player.y + 1, eObject1);
+
+    // Only attack if close enough and on same platform
+    if (dist_x <= 50 && dist_y < 16 && on_same_ground && !is_moving && can_attack)
+    {
+        // Attack!
+        instance_create_layer(x, y, "Enemies", oEnemySlimeAttack);
+		is_attacking = true;
+
+
+        // Start cooldown
+        can_attack = false;
+        attack_cooldown = 30; // 1 second if game is 60 FPS
+    }
+}
+
+// Handle cooldown
+if (!can_attack)
+{
+    attack_cooldown--;
+    if (attack_cooldown <= 0)
+    {
+        can_attack = true;
+		is_attacking = false;
+    }
+}
+
+#endregion
 
 
 
@@ -160,4 +212,15 @@ else
 }
 #endregion
 
-
+if (is_attacking)
+{
+    sprite_index = Sprite_EnemySlime_Attack;
+}
+else if (is_moving)
+{
+    sprite_index = Sprite_EnemySlime_Walking;
+}
+else
+{
+    sprite_index = Sprite_EnemySlime_Idle;
+}
