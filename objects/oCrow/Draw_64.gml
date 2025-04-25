@@ -3,7 +3,7 @@
 // Player Draw GUI Event (Manual Health Bar)
 
 // Position of the health bar on screen
-var bar_x = 100	;
+var bar_x = 20	;
 var bar_y = 20;
 
 // Dimensions of the bar

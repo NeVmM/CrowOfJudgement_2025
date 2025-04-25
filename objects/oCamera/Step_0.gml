@@ -1,3 +1,5 @@
+#region Camera Stuff
+
 //Fullscreen toggle
 if keyboard_check_pressed(vk_f8)
 {
@@ -73,3 +75,13 @@ finalCamY += (_camY - finalCamY) * camTrailSpd_dynamic;
 
 // === 7. Apply camera position
 camera_set_view_pos(view_camera[0], finalCamX, finalCamY);
+
+#endregion;
+
+
+if (shake_timer > 0) {
+    shake_timer--;
+    var shake_x = random_range(-shake_amount, shake_amount);
+    var shake_y = random_range(-shake_amount, shake_amount);
+    camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) + shake_x, camera_get_view_y(view_camera[0]) + shake_y);
+}

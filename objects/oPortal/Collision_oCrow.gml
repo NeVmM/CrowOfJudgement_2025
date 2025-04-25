@@ -7,10 +7,10 @@ randomize();
 var pick = irandom(3);
 oRoomLimiter.roomLimit += 1;
 
-show_debug_message("Teleport #:" + string(oRoomLimiter.roomLimit) + " | Max " + string(oRoomLimiter.maxTeleport));
 
 if (oRoomLimiter.roomLimit >= oRoomLimiter.maxTeleport)
 {
+	health = 100; //this gets the health and every finish game it will revert hp to 100, this is temporary and will be removed
 	game_restart();
 }
 
@@ -27,3 +27,4 @@ if (pick == 3)
 	room_goto(Room4);
 	
 }
+
