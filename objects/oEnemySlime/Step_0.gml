@@ -14,10 +14,10 @@ if (is_moving && place_meeting(x + moveSpeed * facing, y, eObject1))
 #region Random Walk & Random Timer Idle
 move_timer -= 1;
 
-if (move_timer <= 0 && !is_attacking) // Don't switch states if attacking
+if (move_timer <= 0 && !is_attacking && !is_following_player) // UPDATED: Don't random walk if following
 {
     is_moving = !is_moving; // toggle between moving and stopping
-    move_timer = irandom_range(180, 420); // random delay before next toggle
+    move_timer = irandom_range(180, 420);
 	
     // Randomly flip direction when going idle
     if (!is_moving)
@@ -75,37 +75,44 @@ if (!position_meeting(checkX, checkY, eObject1) && is_moving && !is_attacking)
 #region Follow Player & Attack
 var _player = instance_nearest(x, y, oCrow);
 
-if (instance_exists(_player) && !is_attacking)
+is_following_player = false; // UPDATED: Reset first every step
+
+if (instance_exists(_player))
 {
     var dist_x = abs(_player.x - x);
     var dist_y = abs(_player.y - y);
 
-    if (dist_x < 160 && dist_y < 16)
+    if (dist_x < 160 && dist_y < 16) // Within detection range
     {
-        var slime_on_ground = position_meeting(x, y + 1, eObject1);
-        var player_on_ground = position_meeting(_player.x, _player.y + 1, eObject1);
+        is_following_player = true; // UPDATED: Now following
 
-        if (slime_on_ground && player_on_ground)
+        if (!is_attacking && attack_cooldown <= 0)
         {
-            // Face the player
-            facing = (_player.x < x) ? -1 : 1;
+            var slime_on_ground = position_meeting(x, y + 1, eObject1);
+            var player_on_ground = position_meeting(_player.x, _player.y + 1, eObject1);
 
-            if (dist_x > 50)
+            if (slime_on_ground && player_on_ground)
             {
-                is_moving = true;
-                move_timer = 30;
-            }
-            else
-            {
-                is_moving = false;
-                xSpeed = 0;
+                // Face the player
+                facing = (_player.x < x) ? -1 : 1;
 
-                // Begin attack
-                is_attacking = true;
-                attack_effect_spawned = false; // Reset for this attack
-                sprite_index = Sprite_EnemySlime_Attack;
-                image_index = 0;
-                image_speed = 1;
+                if (dist_x > 50)
+                {
+                    is_moving = true;
+                    move_timer = 30;
+                }
+                else
+                {
+                    is_moving = false;
+                    xSpeed = 0;
+
+                    // Begin attack
+                    is_attacking = true;
+                    attack_effect_spawned = false;
+                    sprite_index = Sprite_EnemySlime_Attack;
+                    image_index = 0;
+                    image_speed = 1;
+                }
             }
         }
     }
@@ -115,7 +122,6 @@ if (instance_exists(_player) && !is_attacking)
 #region Handle Attack Animation and Spawn Effect
 if (is_attacking)
 {
-    // Spawn effect only once
     if (!attack_effect_spawned && image_index >= 1)
     {
         var effect_x = x + (facing * 16);
@@ -130,6 +136,15 @@ if (is_attacking)
     {
         is_attacking = false;
         sprite_index = Sprite_EnemySlime_Idle;
+		
+		// Set random cooldown after attack finishes
+		attack_cooldown = irandom_range(room_speed * 0.8, room_speed * 1.7);
+		
+        // UPDATED: After attacking, if still following player, continue
+        if (!is_following_player)
+        {
+            move_timer = irandom_range(180, 420); // Walk randomly again
+        }
     }
 }
 #endregion
@@ -147,4 +162,10 @@ if (!is_attacking)
     }
 }
 image_xscale = facing;
+
+// Cooldown timer
+if (attack_cooldown > 0)
+{
+    attack_cooldown--;
+}
 #endregion
