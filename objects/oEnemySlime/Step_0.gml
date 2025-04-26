@@ -75,51 +75,58 @@ if (!position_meeting(checkX, checkY, eObject1) && is_moving && !is_attacking)
 #region Follow Player & Attack
 var _player = instance_nearest(x, y, oCrow);
 
-if (instance_exists(_player) && !is_attacking) // Only follow if not attacking
+if (instance_exists(_player) && !is_attacking)
 {
     var dist_x = abs(_player.x - x);
     var dist_y = abs(_player.y - y);
-    
-    if (dist_x < 160 && dist_y < 16) // Check range
-    {		
+
+    if (dist_x < 160 && dist_y < 16)
+    {
         var slime_on_ground = position_meeting(x, y + 1, eObject1);
         var player_on_ground = position_meeting(_player.x, _player.y + 1, eObject1);
-        
+
         if (slime_on_ground && player_on_ground)
         {
             // Face the player
             facing = (_player.x < x) ? -1 : 1;
 
-            if (dist_x > 50) // Move toward player
+            if (dist_x > 50)
             {
                 is_moving = true;
-                move_timer = 30; 
+                move_timer = 30;
             }
-            else // Attack when close enough
+            else
             {
                 is_moving = false;
                 xSpeed = 0;
+
+                // Begin attack
                 is_attacking = true;
+                attack_effect_spawned = false; // Reset for this attack
                 sprite_index = Sprite_EnemySlime_Attack;
                 image_index = 0;
-                image_speed = 1; 
-				
-				
-				// Create attack effect (spawn on the side of the enemy)
-                var effect_x = (facing == 1) ? x + 16 : x - 16; // Adjust position based on facing direction
-    var effect_y = y; // Place at the same height as the enemy
-    var attackEffect = instance_create_layer(effect_x, effect_y, "Enemies", oEnemySlimeAtkFX);
-
+                image_speed = 1;
             }
         }
     }
 }
 #endregion
 
-#region Handle Attack Animation
+#region Handle Attack Animation and Spawn Effect
 if (is_attacking)
 {
-    if (image_index >= image_number - 1) // Attack animation finished
+    // Spawn effect only once
+    if (!attack_effect_spawned && image_index >= 1)
+    {
+        var effect_x = x + (facing * 16);
+        var effect_y = y;
+        var fx = instance_create_layer(effect_x, effect_y, layer, oEnemySlimeAtkFX);
+        fx.owner = id;
+        fx.facing = facing;
+        attack_effect_spawned = true;
+    }
+
+    if (image_index >= image_number - 1)
     {
         is_attacking = false;
         sprite_index = Sprite_EnemySlime_Idle;
@@ -128,17 +135,16 @@ if (is_attacking)
 #endregion
 
 #region Sprites
-if (!is_attacking) // Only change sprite if NOT attacking
+if (!is_attacking)
 {
-    if (is_moving) 
+    if (is_moving)
     {
         sprite_index = Sprite_EnemySlime_Walking;
-    } 
-    else 
+    }
+    else
     {
         sprite_index = Sprite_EnemySlime_Idle;
     }
 }
-
-image_xscale = facing; // Flip sprite based on direction
+image_xscale = facing;
 #endregion
