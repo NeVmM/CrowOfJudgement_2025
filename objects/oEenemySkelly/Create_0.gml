@@ -13,5 +13,7 @@ is_moving = true; // starts moving
 
 dead = false;
 
-
-just_hit = 0
+onGround = true;
+can_attack = true;
+attack_cooldown = 0;
+is_attacking = false;

@@ -149,6 +149,18 @@ if (is_attacking)
 }
 #endregion
 
+
+
+
+
+
+
+
+
+
+
+
+//OTHER STUFF
 #region Sprites
 if (!is_attacking)
 {

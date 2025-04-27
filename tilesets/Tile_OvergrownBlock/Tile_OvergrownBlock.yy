@@ -12,14 +12,14 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Blocks",
-    "path":"folders/Blocks.yy",
+    "name":"BlockTileSets",
+    "path":"folders/Blocks/BlockTileSets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sOvergrown_Tile",
-    "path":"sprites/sOvergrown_Tile/sOvergrown_Tile.yy",
+    "name":"Sprite_OvergrownBlock",
+    "path":"sprites/Sprite_OvergrownBlock/Sprite_OvergrownBlock.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
