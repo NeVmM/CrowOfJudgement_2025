@@ -111,7 +111,7 @@ if (instance_exists(_player))
                     attack_effect_spawned = false;
                     sprite_index = Sprite_EnemySlime_Attack;
                     image_index = 0;
-                    image_speed = 1;
+                    image_speed = 1.5;
                 }
             }
         }

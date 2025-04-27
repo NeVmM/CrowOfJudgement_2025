@@ -6,14 +6,8 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_14C223F2","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_1EA05AE7","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7043AF6C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_19DB5B0C","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_68D10EF1","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_18E3F65A","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_226196DB","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_25DF96BE","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_5B2F8A7E","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_68177F46","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_5D1214AB","path":"rooms/Room1/Room1.yy",},
@@ -112,12 +106,6 @@
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"ObjectsAndDesigns","depth":0,"effectEnabled":true,"effectType":null,"gridX":30,"gridY":30,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_25DF96BE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_25DF96BE","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":180.0,"y":240.0,},
-        {"$GMRInstance":"v2","%Name":"inst_226196DB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_226196DB","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":210.0,"y":240.0,},
-        {"$GMRInstance":"v2","%Name":"inst_18E3F65A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_18E3F65A","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":240.0,"y":240.0,},
-        {"$GMRInstance":"v2","%Name":"inst_68D10EF1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_68D10EF1","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":270.0,"y":240.0,},
-        {"$GMRInstance":"v2","%Name":"inst_14C223F2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_14C223F2","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":300.0,"y":240.0,},
-        {"$GMRInstance":"v2","%Name":"inst_1EA05AE7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1EA05AE7","objectId":{"name":"oGrassAnimation_TEST","path":"objects/oGrassAnimation_TEST/oGrassAnimation_TEST.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":330.0,"y":240.0,},
         {"$GMRInstance":"v2","%Name":"inst_7043AF6C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7043AF6C","objectId":{"name":"oTutorialControlsTEXT","path":"objects/oTutorialControlsTEXT/oTutorialControlsTEXT.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":52.0,"y":105.0,},
         {"$GMRInstance":"v2","%Name":"inst_19DB5B0C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_19DB5B0C","objectId":{"name":"oPortal","path":"objects/oPortal/oPortal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":420.0,"y":150.0,},
       ],"layers":[],"name":"ObjectsAndDesigns","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

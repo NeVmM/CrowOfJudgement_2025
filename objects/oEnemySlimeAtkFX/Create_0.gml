@@ -18,7 +18,7 @@ if (image_xscale == 1) {
 
 sprite_index = Sprite_EnemySlime_AttackEffect; // Assign the effect sprite
 image_index = 0; // Start from the first frame
-image_speed = 1; // Adjust speed
+image_speed = 0.4; // Adjust speed
 depth = -10; // Ensure it appears in front of most objects
 alarm[0] = room_speed;
 
