@@ -93,31 +93,78 @@ if (!position_meeting(checkX, checkY, eObject1)) {
 
 #endregion
 
+#region Follow Player & Attack
+var _player = instance_nearest(x, y, oCrow);
 
- if (just_hit > 0)
+is_following_player = false; // UPDATED: Reset first every step
+
+if (instance_exists(_player))
 {
-    just_hit--;
-}
+    var dist_x = abs(_player.x - x);
+    var dist_y = abs(_player.y - y);
 
- 
- 
- 
- 
- 
- 
- 
+    if (dist_x < 160 && dist_y < 16) // Within detection range
+    {
+        is_following_player = true; // UPDATED: Now following
 
+        if (!is_attacking && attack_cooldown <= 0)
+        {
+            var skelly_on_ground = position_meeting(x, y + 1, eObject1);
+            var player_on_ground = position_meeting(_player.x, _player.y + 1, eObject1);
 
-// OTHER STUFF BELOW
-#region Sprites Etc
-if (is_moving) 
-{
-    sprite_index = Sprite_EnemySkelly_Walking;
-} 
-else 
-{
-    sprite_index = Sprite_EnemySkelly_Idle;
+            if (skelly_on_ground && player_on_ground)
+            {
+                // Face the player
+                facing = (_player.x < x) ? -1 : 1;
+
+                if (dist_x > 50)
+                {
+                    is_moving = true;
+                    move_timer = 30;
+                }
+                else
+                {
+                    is_moving = false;
+                    xSpeed = 0;
+
+                    // Begin attack
+                    is_attacking = false;
+                    attack_effect_spawned = false;
+                    sprite_index = Sprite_EnemySkelly_Dead;
+                    image_index = 0;
+                    image_speed = 1.5;
+                }
+            }
+        }
+    }
 }
 #endregion
+ 
+ 
+ 
+ 
+ 
+ 
 
 
+//OTHER STUFF
+#region Sprites
+if (!is_attacking)
+{
+    if (is_moving)
+    {
+        sprite_index = Sprite_EnemySkelly_Walking;
+    }
+    else
+    {
+        sprite_index = Sprite_EnemySkelly_Idle;
+    }
+}
+image_xscale = facing;
+
+// Cooldown timer
+if (attack_cooldown > 0)
+{
+    attack_cooldown--;
+}
+#endregion

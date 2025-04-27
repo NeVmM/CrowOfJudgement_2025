@@ -12,14 +12,14 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Blocks",
-    "path":"folders/Blocks.yy",
+    "name":"BlockTileSets",
+    "path":"folders/Blocks/BlockTileSets.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sGrass_Tile",
-    "path":"sprites/sGrass_Tile/sGrass_Tile.yy",
+    "name":"Sprite_GrassBlock",
+    "path":"sprites/Sprite_GrassBlock/Sprite_GrassBlock.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
