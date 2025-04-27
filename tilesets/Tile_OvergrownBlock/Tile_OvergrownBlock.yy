@@ -1,6 +1,10 @@
 {
   "$GMTileSet":"v1",
+<<<<<<< Updated upstream:tilesets/Tile_OvergrownBlock/Tile_OvergrownBlock.yy
   "%Name":"Tile_OvergrownBlock",
+=======
+  "%Name":"GrassBlockLayer_Tile",
+>>>>>>> Stashed changes:tilesets/GrassBlockLayer_Tile/GrassBlockLayer_Tile.yy
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
