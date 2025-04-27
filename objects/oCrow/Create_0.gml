@@ -17,6 +17,7 @@ function setOnGround(_val = true)
 //Control Setup (Action Controls) Made for basic Input to access the file itself (accessed from Key_Configures)
 controlsSetup();
 
+//IF YOU ARE READING THIS, NEVM WAS HERE!
 
 #region //Sprites
 
