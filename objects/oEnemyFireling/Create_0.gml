@@ -2,7 +2,7 @@ xSpeed = 0;
 ySpeed = 0;
 
 facing = -1;
-moveSpeed = 1.5;
+moveSpeed = 2.5;
 
 hp = 50;
 flash = 0;

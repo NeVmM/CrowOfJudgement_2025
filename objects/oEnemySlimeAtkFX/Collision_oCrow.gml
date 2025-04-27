@@ -1,7 +1,7 @@
 with (other)
 {
 	hp--; // decrement by only 1 per hit
-	health-= 0.3;
+	health-= 0.2;
 	flash = 1.5;
 	with (oCamera)
 	{

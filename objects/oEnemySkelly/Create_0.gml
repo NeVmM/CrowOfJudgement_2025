@@ -13,6 +13,7 @@ is_moving = true; // starts moving
 
 dead = false;
 
+is_following_player = false;
 onGround = true;
 can_attack = true;
 attack_cooldown = 0;
