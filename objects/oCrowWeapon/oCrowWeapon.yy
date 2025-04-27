@@ -10,6 +10,10 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oEnemyEye","path":"objects/oEnemyEye/oEnemyEye.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oEnemyFireling","path":"objects/oEnemyFireling/oEnemyFireling.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oEnemySkelly","path":"objects/oEnemySkelly/oEnemySkelly.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oEenemySkelly","path":"objects/oEenemySkelly/oEenemySkelly.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+
+
   ],
   "managed":true,
   "name":"oCrowWeapon",
