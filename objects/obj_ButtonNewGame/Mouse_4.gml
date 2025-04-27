@@ -19,6 +19,10 @@ if (pick == 3)
 {
 	room_goto(Room4);
 }
+/*if (pick == 0)
+{
+	room_goto(Room4);
+}
 
 
 

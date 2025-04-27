@@ -18,7 +18,6 @@ function setOnGround(_val = true)
 controlsSetup();
 
 
-
 #region //Sprites
 
 maskSprite = Sprite_Idle;

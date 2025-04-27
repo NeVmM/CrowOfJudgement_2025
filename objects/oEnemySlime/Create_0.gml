@@ -18,6 +18,8 @@ can_attack = true;
 attack_cooldown = 0;
 is_attacking = false;
 
-
-
 just_hit = 0
+
+
+attack_timer = 0;
+attack_effect_spawned = false;

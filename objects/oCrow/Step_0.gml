@@ -385,7 +385,6 @@ if (place_meeting(x, y, oBad) && flash_cooldown <= 0) // Player collides with oB
     flash_timer = 3; // frames per flash (adjust as needed)
     flash_cooldown = 30; // prevent re-trigger for 30 
 	
-	
 	shake_amount = 100; // adjust for intensity
 	shake_timer = 10; // how long the shake lasts
 	
@@ -415,7 +414,6 @@ if (flash_count > 0)
     flash_count--;
     flash_timer = 3;
 }
-
 if (flash_cooldown > 0)
 {
     flash_cooldown--;
@@ -611,5 +609,5 @@ mask_index = Sprite_GlideIdle;
 
 #endregion
 
-// UPDATED IN APRIL 21 - 2025
+// UPDATED IN APRIL 27 - 2025
 
